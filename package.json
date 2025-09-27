@@ -1,0 +1,28 @@
+{
+  "name": "connecting-node-to-a-postgres-db",
+  "version": "1.0.0",
+  "description": "connecting Node app to a Postgres database",
+  "license": "ISC",
+  "author": "Mohammed Nafee",
+  "type": "module",
+  "main": "server.js",
+  "scripts": {
+    "build": "npx tsc",
+    "start": "nodemon --exec ts-node --experimental-specifier-resolution=node dist/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.5.2",
+    "@types/pg": "^8.15.5",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "db-migrate": "^0.11.14",
+    "db-migrate-pg": "^1.5.2",
+    "dotenv": "^17.2.2",
+    "express": "^5.1.0",
+    "pg": "^8.16.3"
+  }
+}
