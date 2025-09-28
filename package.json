@@ -4,11 +4,13 @@
   "description": "connecting Node app to a Postgres database",
   "license": "ISC",
   "author": "Mohammed Nafee",
-  "type": "module",
+  "type": "commonjs",
   "main": "server.js",
   "scripts": {
     "build": "npx tsc",
-    "start": "nodemon --exec ts-node --experimental-specifier-resolution=node dist/server.js"
+    "start": "nodemon --exec ts-node --experimental-specifier-resolution=node dist/server.js",
+    "migrate": "db-migrate up -e development --config database.js",
+    "migrate:down": "db-migrate down -e development --config database.js"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
